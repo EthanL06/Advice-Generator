@@ -28,7 +28,6 @@ function App() {
   };
 
   const fetchAdvice = async () => {
-    console.log("called");
     fetch("https://api.adviceslip.com/advice")
       .then((res) => res.json())
       .then((data) => {
