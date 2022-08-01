@@ -28,13 +28,15 @@ function App() {
   };
 
   const fetchAdvice = async () => {
-    fetch("https://api.adviceslip.com/advice")
+    console.log("here");
+    fetch("https://api.adviceslip.com/advice", { cache: "no-cache" })
       .then((res) => res.json())
       .then((data) => {
         if (data.slip.id === id) {
           fetchAdvice();
           return;
         }
+
         setId(data.slip.id);
         setAdvice(data.slip.advice);
       });
