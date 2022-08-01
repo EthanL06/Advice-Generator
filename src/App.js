@@ -67,7 +67,7 @@ function App() {
         onClick={(e) => clickButton(e)}
         className="bg-[#52FFA8] p-4 rounded-full relative top-6 scale-100 transition-transform hover:scale-90 hover:shadow-[0_0_50px_10px_#52FFA8] hover:shadow-[#52FFA8] hover active:scale-75"
       >
-        <img src={dice} alt="dice" />
+        <img src={dice} alt="dice" className="select-none" />
       </button>
     </div>
   );
